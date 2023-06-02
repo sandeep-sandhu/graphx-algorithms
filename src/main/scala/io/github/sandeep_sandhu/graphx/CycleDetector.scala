@@ -6,7 +6,6 @@
 
 package io.github.sandeep_sandhu.graphx
 
-import org.apache.spark.graphx.GraphLoader
 import org.apache.spark.graphx.{Graph, VertexId}
 import org.apache.spark.rdd.RDD
 

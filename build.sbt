@@ -2,19 +2,19 @@ name := "graphx-algorithms"
 
 version := "0.1"
 
-scalaVersion := "2.12.16"
+scalaVersion := "2.13.10"
 
 enablePlugins(AssemblyPlugin)
 
 assembly / mainClass := Some("SparkApp")
 
 libraryDependencies ++= Seq(
-    "org.apache.spark" %% "spark-sql" % "3.2.0" % "provided"
+    "org.apache.spark" %% "spark-sql" % "3.4.0" % "provided"
   , "com.github.fommil.netlib" % "all" % "1.1.2" pomOnly()
-  , "org.apache.spark" %% "spark-streaming" % "3.2.0" % "provided"
-  , "org.apache.spark" %% "spark-streaming-kafka-0-10"  % "3.2.0" % "provided"
-  , "org.apache.spark" %% "spark-graphx"  % "3.2.0" % "provided"
-  , "org.apache.spark" %% "spark-mllib"  % "3.2.0" % "provided"
+  , "org.apache.spark" %% "spark-streaming" % "3.4.0" % "provided"
+  , "org.apache.spark" %% "spark-streaming-kafka-0-10"  % "3.4.0" % "provided"
+  , "org.apache.spark" %% "spark-graphx"  % "3.4.0" % "provided"
+  , "org.apache.spark" %% "spark-mllib"  % "3.4.0" % "provided"
   , "io.netty" % "netty-buffer" % "4.1.68.Final" % "provided"
   , "log4j" % "log4j" % "1.2.17" % "provided"
 )
@@ -49,8 +49,8 @@ scalacOptions ++= Seq(
   "-encoding", "UTF-8",
   "-unchecked",
   "-deprecation",
-  "-Xfuture",
-  "-Yno-adapted-args",
+  //removed in scala 2.13 "-Xfuture",
+  //removed in scala 2.13 "-Yno-adapted-args",
   "-Ywarn-dead-code",
   "-Ywarn-numeric-widen",
   "-Ywarn-value-discard",

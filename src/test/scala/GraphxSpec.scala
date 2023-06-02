@@ -60,7 +60,7 @@ class GraphxSpec
         vertexStorageLevel = StorageLevel.MEMORY_AND_DISK
       )
       .mapEdges(e => e.attr.toDouble)
-      .mapVertices[(Long, Double)]((vid, data) => (vid.toLong, 0.0));
+      .mapVertices[(Long, Double)]((vid, data) => (vid, 0.0));
 
     // Generate graph 2 as a random graph:
     graph2 = GraphGenerators

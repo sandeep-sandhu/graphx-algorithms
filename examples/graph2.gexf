@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.2draft" version="1.2">
+ <graph mode="static" defaultedgetype="directed">
+ <nodes>
+ <node id="1" label="(somebody,postdoc)" />
+ <node id="7" label="(jgonzal,postdoc)" />
+ <node id="2" label="(istoica,prof)" />
+ <node id="3" label="(rxin,student)" />
+ <node id="10" label="(hoityToity,student)" />
+ <node id="5" label="(franklin,prof)" />
+ </nodes>
+ <edges>
+ <edge source="3" target="7" label="collab" />
+ <edge source="5" target="3" label="advisor" />
+ <edge source="2" target="5" label="colleague" />
+ <edge source="5" target="7" label="advisor" />
+ <edge source="10" target="5" label="friend" />
+ <edge source="10" target="1" label="friend" />
+ </edges>
+ </graph>
+</gexf>

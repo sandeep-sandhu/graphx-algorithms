@@ -25,7 +25,7 @@ object Utilities {
       "(" + triplet.srcId + "," + triplet.srcAttr._1 + ") --[ " + triplet.attr + " ]--> (" + triplet.dstId + "," + triplet.dstAttr._1 + ")"
     );
 
-    facts.collect.foreach(println(_))
+    facts.collect().foreach(println(_))
   }
 
   def printOnlyEdges[V, E](graph: Graph[V, E]): Unit = {
@@ -34,13 +34,13 @@ object Utilities {
       " " + triplet.toTuple._1 + " --[" + triplet.toTuple._3 + "]--> " + triplet.toTuple._2
     );
 
-    facts.collect.foreach(println(_))
+    facts.collect().foreach(println(_))
   }
 
   def printVertices[V, E](graph: Graph[_, _]): Unit =
     graph.vertices
       .map(vd => "Vertex ID = " + vd._1 + ": " + vd._2)
-      .collect
+      .collect()
       .foreach(println(_))
 
   def printNeighbors[V, D, E](
@@ -49,7 +49,7 @@ object Utilities {
   ): Unit =
     graph
       .collectNeighborIds(edgeDirection)
-      .collect
+      .collect()
       .foreach(x =>
         println(
           "Neighbors of " + x._1 + " (" + edgeDirection + ") are: " + x._2
